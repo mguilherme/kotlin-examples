@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.slf4j:slf4j-simple:1.7.26")
 
     testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.2")
 }
