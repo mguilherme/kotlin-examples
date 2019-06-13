@@ -21,7 +21,7 @@ object Fibonacci {
      * @param operation the function
      * @return A comma separated String
      */
-    fun range(range: IntRange, operation: (Int) -> Int) = range.map(operation).map(Int::toString).joinToString()
+    fun range(range: IntRange, operation: (Int) -> Int) = range.map(operation).joinToString(transform = Int::toString)
 
 }
 
