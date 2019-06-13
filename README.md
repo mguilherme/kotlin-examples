@@ -14,7 +14,7 @@ An Armstrong number is the one that equals the sum of its digits raised to the p
 * `9474 = 9^4 + 4^4 +7^4 + 4^4`
 * `54748 = 5^5 + 4^5 + 7^5 + 4^5 + 8^5`
 
-### Fibonacci
+## Fibonacci
 In mathematics, the Fibonacci numbers or Fibonacci series or Fibonacci sequence are the numbers in the following integer sequence:
 `0 1 1 2 3 5 8 13 21 34 55 89 144 233 377, ...`
 
