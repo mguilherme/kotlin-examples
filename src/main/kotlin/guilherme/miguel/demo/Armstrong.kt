@@ -4,6 +4,12 @@ import kotlin.math.pow
 
 object Armstrong {
 
+    /**
+     * Check if a number is Armstrong.
+     *
+     * @param number number number to check if Armstrong
+     * @return true if Armstrong, false otherwise
+     */
     fun isArmstrong(number: Int): Boolean {
         val string = number.toString()
 
