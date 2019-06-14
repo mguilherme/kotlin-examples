@@ -12,7 +12,7 @@ object FizzBuzz {
      * @param n the number
      * @return fizz, buzz, fizzbuzz or the number itself
      */
-    fun number(n: Int): String = when (true) {
+    fun number(n: Int): String = when {
         n divisibleBy 15 -> "fizzbuzz"
         n divisibleBy 3 -> "fizz"
         n divisibleBy 5 -> "buzz"
