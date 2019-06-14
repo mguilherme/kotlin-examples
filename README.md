@@ -35,3 +35,11 @@ Create a Password verifications class called __PasswordVerifier__.
     5. password should have one number at least
 
 Each one of these should throw an exception with a different message of your choosing.
+
+## Prime numbers
+A prime number (or a prime) is a natural number __greater than 1__ that has no positive divisors other than __1 and itself__.
+
+A natural number greater than 1 that is not a prime number is called a composite number.
+For example, 5 is prime, as only 1 and 5 divide it, whereas 6 is composite, since it has the divisors 2 and 3 in addition to 1 and 6.
+
+The fundamental theorem of arithmetic establishes the central role of primes in number theory: any integer greater than 1 can be expressed as a product of primes that is unique up to ordering. This theorem requires excluding 1 as a prime.
