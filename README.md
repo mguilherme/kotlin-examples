@@ -19,3 +19,7 @@ In mathematics, the Fibonacci numbers or Fibonacci series or Fibonacci sequence 
 `0 1 1 2 3 5 8 13 21 34 55 89 144 233 377, ...`
 
 By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
+
+## FizzBuzz
+Write some code that prints out the following for a contiguous range of numbers:
+the number **'fizz'** for numbers that are multiples of 3, **'buzz'** for numbers that   are multiples of 5, **'fizzbuzz'** for numbers that are multiples of 15, e.g. if I run   the program over a range from 1-20 I should get the following output: `1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz`.
