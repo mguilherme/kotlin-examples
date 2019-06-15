@@ -43,3 +43,8 @@ A natural number greater than 1 that is not a prime number is called a composite
 For example, 5 is prime, as only 1 and 5 divide it, whereas 6 is composite, since it has the divisors 2 and 3 in addition to 1 and 6.
 
 The fundamental theorem of arithmetic establishes the central role of primes in number theory: any integer greater than 1 can be expressed as a product of primes that is unique up to ordering. This theorem requires excluding 1 as a prime.
+
+## List and String
+Collection of string a list exercises.
+
+1. Write a function that takes a number and returns a list of its digits. So for `2342` it should return `[2, 3, 4, 2]`.
