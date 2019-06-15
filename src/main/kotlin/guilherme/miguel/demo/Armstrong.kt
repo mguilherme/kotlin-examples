@@ -14,7 +14,7 @@ object Armstrong {
         val string = number.toString()
 
         val sum = string
-            .map { it.toString() }
+            .map(Character::getNumericValue)
             .map { it.toDouble() }
             .map { it.pow(string.length) }
             .sum()
