@@ -25,7 +25,7 @@ class FibonacciTest : StringSpec({
         }
     }
 
-    "Should print the fibonacci numbers from 0 to 10" {
+    "should print the fibonacci numbers from 0 to 10" {
         Fibonacci.range(0..10, Fibonacci::fibonacci) shouldBe "0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55"
     }
 

@@ -19,7 +19,7 @@ class FizzBuzzTest : StringSpec({
         }
     }
 
-    "Should print the fizzbuzz numbers from 1 to 20" {
+    "should print the fizzbuzz numbers from 1 to 20" {
         FizzBuzz.range(
             1..20,
             FizzBuzz::number

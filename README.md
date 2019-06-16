@@ -49,3 +49,4 @@ Collection of string a list exercises.
 
 1. Write a function that takes a number and returns a list of its digits. So for `2342` it should return `[2, 3, 4, 2]`.
 2. Write function that translates a text to __Pig Latin__ and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding ‘__ay__’. “__The quick brown fox__” becomes “__Hetay uickqay rownbay oxfay__”.
+3. Write a function that tests whether a string is a palindrome.

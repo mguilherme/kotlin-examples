@@ -38,8 +38,14 @@ private infix fun String.convertTo(converter: (String) -> String): String {
         .capitalize()
 }
 
+/**
+ * Tests whether a string is a palindrome.
+ */
+fun String.isPalindrome() = this == this.reversed()
+
 fun main() {
     println(2324.toIntList())
     println("The quick brown fox".toPigLatin())
     println("Hetay uickqay rownbay oxfay".toEnglish())
+    println("wow".isPalindrome())
 }
