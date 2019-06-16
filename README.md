@@ -1,5 +1,6 @@
 # Kotlin Examples
 This project is a small showcase for what can be done in Kotlin with small algorithms.
+The aim of this exercises are to solve the problems using kotlin library, therefore the idea is to make it as simple as possible.
 For each one please check the respective unit test.
 
 ## Armstrong
