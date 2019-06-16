@@ -10,8 +10,12 @@ class ListAndStringTest : StringSpec({
         2342.toIntList() shouldContainExactly listOf(2, 3, 4, 2)
     }
 
-    "Should translate to Pig Latin" {
+    "Should translate from English to Pig Latin" {
         "The quick brown fox".toPigLatin() shouldBe "Hetay uickqay rownbay oxfay"
+    }
+
+    "Should translate from Pig Latin to English" {
+        "Hetay uickqay rownbay oxfay".toEnglish() shouldBe "The quick brown fox"
     }
 
 })
