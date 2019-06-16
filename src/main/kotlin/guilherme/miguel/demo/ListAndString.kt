@@ -4,15 +4,15 @@ package guilherme.miguel.demo
  * Converts a number in a list of its digits.
  * @return the list of digits
  */
-fun Int.toIntList(): List<Int> = this.toString().map(Character::getNumericValue)
+fun Int.toIntList(): List<Int> = toString().map(Character::getNumericValue)
 
 /**
  * Translates a text to Pig Latin.
  * @return the given text translated to Pig Latin
  */
 fun String.toPigLatin(): String {
-    val pigWord: (String) -> String = { "${it.takeLast(it.length - 1)}${it.first()}ay" }
-    return this convertTo pigWord
+    val pigLatinWord: (String) -> String = { "${it.takeLast(it.length - 1)}${it.first()}ay" }
+    return this convertTo pigLatinWord
 }
 
 /**
