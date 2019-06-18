@@ -43,9 +43,29 @@ private infix fun String.convertTo(converter: (String) -> String): String {
  */
 fun String.isPalindrome() = this == this.reversed()
 
+/**
+ * Retrieves the list of words in a rectangular frame.
+ */
+fun List<String>.toFrame(): String {
+    if (this.isEmpty()) return ""
+
+    val maxWordLength = maxBy { it.length }.orEmpty().length
+    val verticalLine = "*".repeat(maxWordLength + 4)
+
+    val prefix: (String) -> String = { "* $it" }
+    val suffix: (String) -> String = {
+        val word = it.replace(Regex("""[$* ]"""), "")
+        val rightSpaces = (maxWordLength - word.length) + 1
+        "$it${" ".repeat(rightSpaces)}*\n"
+    }
+
+    return "$verticalLine\n${map(prefix).map(suffix).joinToString(separator = "")}$verticalLine\n".trim()
+}
+
 fun main() {
     println(2324.toIntList())
     println("The quick brown fox".toPigLatin())
     println("Hetay uickqay rownbay oxfay".toEnglish())
     println("wow".isPalindrome())
+    println(listOf("Hello", "World", "in", "a", "frame").toFrame())
 }

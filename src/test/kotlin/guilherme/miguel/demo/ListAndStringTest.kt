@@ -33,4 +33,16 @@ class ListAndStringTest : StringSpec({
         }
     }
 
+    "should retrieve a list of strings in a rectangular frame" {
+        listOf("Hello", "World", "in", "a", "frame").toFrame() shouldBe """
+                                                                        *********
+                                                                        * Hello *
+                                                                        * World *
+                                                                        * in    *
+                                                                        * a     *
+                                                                        * frame *
+                                                                        *********
+                                                                        """.trimIndent()
+    }
+
 })

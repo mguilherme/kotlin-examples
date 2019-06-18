@@ -52,3 +52,13 @@ Collection of string a list exercises.
 2. Write function that translates a text to __Pig Latin__ and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding ‘__ay__’. “__The quick brown fox__” becomes “__Hetay uickqay rownbay oxfay__”.
 3. Write a function that tests whether a string is a palindrome.
 A __palindrome__ is a word, number, phrase, or other sequence of characters which reads the same backward as forward, such as _madam_ or _racecar_ or the number _10801_.
+4. Write a function that takes a list of strings and retrieves them, one per line, in a rectangular frame. For example the list `["Hello", "World", "in", "a", "frame"]` gets returned as:
+```
+*********
+* Hello *
+* World *
+* in    *
+* a     *
+* frame *
+*********
+```
