@@ -49,7 +49,7 @@ fun String.isPalindrome() = this == this.reversed()
 fun List<String>.toFrame(): String {
     if (this.isEmpty()) return ""
 
-    val maxWordLength = maxBy { it.length }.orEmpty().length
+    val maxWordLength = this.maxBy { it.length }.orEmpty().length
     val verticalLine = "*".repeat(maxWordLength + 4)
 
     val prefix: (String) -> String = { "* $it" }
@@ -59,7 +59,7 @@ fun List<String>.toFrame(): String {
         "$it${" ".repeat(rightSpaces)}*\n"
     }
 
-    return "$verticalLine\n${map(prefix).map(suffix).joinToString(separator = "")}$verticalLine\n".trim()
+    return "$verticalLine\n${this.map(prefix).map(suffix).joinToString(separator = "")}$verticalLine\n".trim()
 }
 
 fun main() {
