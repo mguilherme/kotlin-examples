@@ -59,7 +59,7 @@ fun List<String>.toFrame(): String {
         "$it${" ".repeat(rightSpaces)}*\n"
     }
 
-    return "$verticalLine\n${this.map(prefix).map(suffix).joinToString(separator = "")}$verticalLine\n".trim()
+    return "$verticalLine\n${this.map(prefix).map(suffix).joinToString("")}$verticalLine\n".trim()
 }
 
 fun main() {
