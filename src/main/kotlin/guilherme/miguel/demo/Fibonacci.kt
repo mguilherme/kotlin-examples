@@ -3,11 +3,6 @@ package guilherme.miguel.demo
 import guilherme.miguel.demo.Fibonacci.fibonacci
 import guilherme.miguel.demo.Fibonacci.transform
 
-//private fun Int.fibonacci(): Int = when (this) {
-//    0, 1 -> this
-//    else -> (this - 1).fibonacci() + (this - 2).fibonacci()
-//}
-
 object Fibonacci {
 
     /**

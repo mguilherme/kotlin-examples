@@ -1,7 +1,7 @@
 package guilherme.miguel.demo
 
 import guilherme.miguel.demo.ListAndString.createFrame
-import guilherme.miguel.demo.ListAndString.toIntList
+import guilherme.miguel.demo.ListAndString.createIntList
 import io.kotlintest.data.forall
 import io.kotlintest.matchers.collections.shouldContainExactly
 import io.kotlintest.shouldBe
@@ -11,7 +11,7 @@ import io.kotlintest.tables.row
 class ListAndStringTest : StringSpec({
 
     "should retrieve a list of its digits" {
-        toIntList(2342) shouldContainExactly listOf(2, 3, 4, 2)
+        createIntList(2342) shouldContainExactly listOf(2, 3, 4, 2)
     }
 
     "should translate from English to Pig Latin" {

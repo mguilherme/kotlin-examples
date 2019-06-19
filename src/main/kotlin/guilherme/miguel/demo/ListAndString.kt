@@ -1,7 +1,7 @@
 package guilherme.miguel.demo
 
 import guilherme.miguel.demo.ListAndString.createFrame
-import guilherme.miguel.demo.ListAndString.toIntList
+import guilherme.miguel.demo.ListAndString.createIntList
 
 /**
  * Translates a text to Pig Latin.
@@ -47,7 +47,7 @@ object ListAndString {
      * @param n the number
      * @return the list of digits
      */
-    fun toIntList(n: Int): List<Int> = n.toString().map { Character.getNumericValue(it) }
+    fun createIntList(n: Int): List<Int> = n.toString().map { Character.getNumericValue(it) }
 
     /**
      * Retrieves a given list of words in a rectangular frame.
@@ -70,7 +70,7 @@ object ListAndString {
 }
 
 fun main() {
-    println(toIntList(2324))
+    println(createIntList(2324))
     println("The quick brown fox".toPigLatin())
     println("Hetay uickqay rownbay oxfay".toEnglish())
     println("wow".isPalindrome())
