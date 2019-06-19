@@ -15,7 +15,7 @@ class ArmstrongTest : StringSpec({
             row(54748, true),
             row(100, false)
         ) { n, result ->
-            Armstrong.isArmstrong(n) shouldBe result
+            n.isArmstrong() shouldBe result
         }
     }
 

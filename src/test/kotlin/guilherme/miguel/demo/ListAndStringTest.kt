@@ -1,5 +1,7 @@
 package guilherme.miguel.demo
 
+import guilherme.miguel.demo.ListAndString.createFrame
+import guilherme.miguel.demo.ListAndString.toIntList
 import io.kotlintest.data.forall
 import io.kotlintest.matchers.collections.shouldContainExactly
 import io.kotlintest.shouldBe
@@ -9,7 +11,7 @@ import io.kotlintest.tables.row
 class ListAndStringTest : StringSpec({
 
     "should retrieve a list of its digits" {
-        2342.toIntList() shouldContainExactly listOf(2, 3, 4, 2)
+        toIntList(2342) shouldContainExactly listOf(2, 3, 4, 2)
     }
 
     "should translate from English to Pig Latin" {
@@ -34,7 +36,7 @@ class ListAndStringTest : StringSpec({
     }
 
     "should retrieve a list of strings in a rectangular frame" {
-        listOf("Hello", "World", "in", "a", "frame").toFrame() shouldBe """
+        createFrame(listOf("Hello", "World", "in", "a", "frame")) shouldBe """
                                                                         *********
                                                                         * Hello *
                                                                         * World *

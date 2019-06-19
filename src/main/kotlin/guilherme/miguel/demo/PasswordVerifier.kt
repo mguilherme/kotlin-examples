@@ -1,5 +1,7 @@
 package guilherme.miguel.demo
 
+import guilherme.miguel.demo.PasswordVerifier.verify
+
 object PasswordVerifier {
 
     /**
@@ -27,5 +29,5 @@ object PasswordVerifier {
 }
 
 fun main() {
-    PasswordVerifier.verify("aaaaa5AAAAA")
+    verify("aaaaa5AAAAA")
 }

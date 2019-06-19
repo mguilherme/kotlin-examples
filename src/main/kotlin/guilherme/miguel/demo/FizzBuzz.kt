@@ -1,5 +1,11 @@
 package guilherme.miguel.demo
 
+import guilherme.miguel.demo.FizzBuzz.fizzbuzz
+import guilherme.miguel.demo.FizzBuzz.transform
+
+/**
+ * Checks if the number is divisible by x.
+ */
 infix fun Int.divisibleBy(x: Int) = this % x == 0
 
 object FizzBuzz {
@@ -12,7 +18,7 @@ object FizzBuzz {
      * @param n the number
      * @return fizz, buzz, fizzbuzz or the number itself
      */
-    fun number(n: Int): String = when {
+    fun fizzbuzz(n: Int): String = when {
         n divisibleBy 15 -> "fizzbuzz"
         n divisibleBy 3 -> "fizz"
         n divisibleBy 5 -> "buzz"
@@ -20,18 +26,19 @@ object FizzBuzz {
     }
 
     /**
-     * Parse a range of numbers
+     * Applies a given operation into a range of values.
      *
-     * @param range the range
+     * @param range the range of values
+     * @param operation the operation
      * @return a string with the multiples of 3, 5 or 15
      *         replaced with fizz, buzz, fizzbuzz or the number itself
      */
-    fun range(range: IntRange, operation: (Int) -> String): String {
+    fun transform(range: IntRange, operation: (Int) -> String): String {
         return range.joinToString(" ", transform = operation)
     }
 
 }
 
 fun main() {
-    println(FizzBuzz.range(1..20) { FizzBuzz.number(it) })
+    println(transform(1..20) { fizzbuzz(it) })
 }

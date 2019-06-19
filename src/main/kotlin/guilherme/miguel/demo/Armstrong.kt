@@ -2,29 +2,24 @@ package guilherme.miguel.demo
 
 import kotlin.math.pow
 
-object Armstrong {
+/**
+ * Check if an number is Armstrong.
+ *
+ * @return true if Armstrong, false otherwise
+ */
+fun Int.isArmstrong(): Boolean {
+    val string = this.toString()
 
-    /**
-     * Check if a number is Armstrong.
-     *
-     * @param number number number to check if Armstrong
-     * @return true if Armstrong, false otherwise
-     */
-    fun isArmstrong(number: Int): Boolean {
-        val string = number.toString()
+    val sum = string
+        .map { Character.getNumericValue(it) }
+        .map { it.toDouble() }
+        .map { it.pow(string.length) }
+        .sum()
+        .toInt()
 
-        val sum = string
-            .map(Character::getNumericValue)
-            .map { it.toDouble() }
-            .map { it.pow(string.length) }
-            .sum()
-            .toInt()
-
-        return sum == number
-    }
-
+    return sum == this
 }
 
 fun main() {
-    println(Armstrong.isArmstrong(371))
+    println(371.isArmstrong())
 }

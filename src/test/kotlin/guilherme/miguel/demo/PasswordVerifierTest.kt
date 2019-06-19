@@ -1,5 +1,6 @@
 package guilherme.miguel.demo
 
+import guilherme.miguel.demo.PasswordVerifier.verify
 import io.kotlintest.data.forall
 import io.kotlintest.shouldBe
 import io.kotlintest.shouldThrow
@@ -17,9 +18,8 @@ class PasswordVerifierTest : StringSpec({
             row("aaaaaAAAAA", "password should have one number at least")
 
         ) { str, msg ->
-            val exception = shouldThrow<IllegalArgumentException> {
-                PasswordVerifier.verify(str)
-            }
+            val exception = shouldThrow<IllegalArgumentException> { verify(str) }
+
             exception.message shouldBe msg
         }
     }

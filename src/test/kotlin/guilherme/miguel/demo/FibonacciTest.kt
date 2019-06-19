@@ -1,5 +1,7 @@
 package guilherme.miguel.demo
 
+import guilherme.miguel.demo.Fibonacci.fibonacci
+import guilherme.miguel.demo.Fibonacci.transform
 import io.kotlintest.data.forall
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
@@ -21,12 +23,12 @@ class FibonacciTest : StringSpec({
             row(9, 34),
             row(10, 55)
         ) { n, result ->
-            Fibonacci.fibonacci(n) shouldBe result
+            fibonacci(n) shouldBe result
         }
     }
 
     "should print the fibonacci numbers from 0 to 10" {
-        Fibonacci.range(0..10, Fibonacci::fibonacci) shouldBe "0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55"
+        transform(0..10) { fibonacci(it) } shouldBe "0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55"
     }
 
 })

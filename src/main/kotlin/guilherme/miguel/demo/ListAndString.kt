@@ -1,10 +1,7 @@
 package guilherme.miguel.demo
 
-/**
- * Converts a number in a list of its digits.
- * @return the list of digits
- */
-fun Int.toIntList(): List<Int> = toString().map(Character::getNumericValue)
+import guilherme.miguel.demo.ListAndString.createFrame
+import guilherme.miguel.demo.ListAndString.toIntList
 
 /**
  * Translates a text to Pig Latin.
@@ -43,29 +40,39 @@ private infix fun String.convertTo(converter: (String) -> String): String {
  */
 fun String.isPalindrome() = this == this.reversed()
 
-/**
- * Retrieves the list of words in a rectangular frame.
- */
-fun List<String>.toFrame(): String {
-    if (this.isEmpty()) return ""
+object ListAndString {
 
-    val maxWordLength = this.maxBy { it.length }.orEmpty().length
-    val verticalLine = "*".repeat(maxWordLength + 4)
+    /**
+     * Converts a given number in a list of its digits.
+     * @param n the number
+     * @return the list of digits
+     */
+    fun toIntList(n: Int): List<Int> = n.toString().map { Character.getNumericValue(it) }
 
-    val prefix: (String) -> String = { "* $it" }
-    val suffix: (String) -> String = {
-        val word = it.replace(Regex("""[$* ]"""), "")
-        val rightSpaces = (maxWordLength - word.length) + 1
-        "$it${" ".repeat(rightSpaces)}*\n"
+    /**
+     * Retrieves a given list of words in a rectangular frame.
+     */
+    fun createFrame(words: List<String>): String {
+        if (words.isEmpty()) return ""
+
+        val maxWordLength = words.maxBy { it.length }.orEmpty().length
+        val verticalLine = "*".repeat(maxWordLength + 4)
+
+        val prefix: (String) -> String = { "* $it" }
+        val suffix: (String) -> String = {
+            val word = it.replace(Regex("""[$* ]"""), "")
+            val rightSpaces = (maxWordLength - word.length) + 1
+            "$it${" ".repeat(rightSpaces)}*\n"
+        }
+
+        return "$verticalLine\n${words.map(prefix).map(suffix).joinToString("")}$verticalLine\n".trim()
     }
-
-    return "$verticalLine\n${this.map(prefix).map(suffix).joinToString("")}$verticalLine\n".trim()
 }
 
 fun main() {
-    println(2324.toIntList())
+    println(toIntList(2324))
     println("The quick brown fox".toPigLatin())
     println("Hetay uickqay rownbay oxfay".toEnglish())
     println("wow".isPalindrome())
-    println(listOf("Hello", "World", "in", "a", "frame").toFrame())
+    println(createFrame(listOf("Hello", "World", "in", "a", "frame")))
 }
