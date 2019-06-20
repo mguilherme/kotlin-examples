@@ -1,12 +1,13 @@
 package guilherme.miguel.demo
 
+import guilherme.miguel.demo.Morse.textToMorse
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
 
 class MorseTest : StringSpec({
 
     "Should translate the given text to Morse code" {
-        Morse.textToMorse("SOS SOS") shouldBe "...---.../...---..."
+        textToMorse("SOS SOS") shouldBe "...---.../...---..."
     }
 
 })

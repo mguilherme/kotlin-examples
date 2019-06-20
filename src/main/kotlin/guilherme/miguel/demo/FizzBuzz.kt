@@ -3,12 +3,13 @@ package guilherme.miguel.demo
 import guilherme.miguel.demo.FizzBuzz.fizzbuzz
 import guilherme.miguel.demo.FizzBuzz.transform
 
-/**
- * Checks if the number is divisible by x.
- */
-infix fun Int.divisibleBy(x: Int) = this % x == 0
 
 object FizzBuzz {
+
+    /**
+     * Checks if the number is divisible by x.
+     */
+    private infix fun Int.divisibleBy(x: Int) = this % x == 0
 
     /**
      * Retrieves fizz for numbers that are multiples of 3,
