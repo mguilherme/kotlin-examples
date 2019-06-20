@@ -14,14 +14,6 @@ class ListAndStringTest : StringSpec({
         createIntList(2342) shouldContainExactly listOf(2, 3, 4, 2)
     }
 
-    "should translate from English to Pig Latin" {
-        "The quick brown fox".toPigLatin() shouldBe "Hetay uickqay rownbay oxfay"
-    }
-
-    "should translate from Pig Latin to English" {
-        "Hetay uickqay rownbay oxfay".toEnglish() shouldBe "The quick brown fox"
-    }
-
     "check if a string is palindrome" {
         forall(
             row("wow", true),

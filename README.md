@@ -45,14 +45,16 @@ For example, 5 is prime, as only 1 and 5 divide it, whereas 6 is composite, sinc
 
 The fundamental theorem of arithmetic establishes the central role of primes in number theory: any integer greater than 1 can be expressed as a product of primes that is unique up to ordering. This theorem requires excluding 1 as a prime.
 
+## Pig Latin
+Write function that translates a text to __Pig Latin__ and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding ‘__ay__’. “__The quick brown fox__” becomes “__Hetay uickqay rownbay oxfay__”.
+
 ## List and String
 Collection of string a list exercises.
 
 1. Write a function that takes a number and returns a list of its digits. So for `2342` it should return `[2, 3, 4, 2]`.
-2. Write function that translates a text to __Pig Latin__ and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding ‘__ay__’. “__The quick brown fox__” becomes “__Hetay uickqay rownbay oxfay__”.
-3. Write a function that tests whether a string is a palindrome.
+2. Write a function that tests whether a string is a palindrome.
 A __palindrome__ is a word, number, phrase, or other sequence of characters which reads the same backward as forward, such as _madam_ or _racecar_ or the number _10801_.
-4. Write a function that takes a list of strings and retrieves them, one per line, in a rectangular frame. For example the list `["Hello", "World", "in", "a", "frame"]` gets returned as:
+3. Write a function that takes a list of strings and retrieves them, one per line, in a rectangular frame. For example the list `["Hello", "World", "in", "a", "frame"]` gets returned as:
 ```
 *********
 * Hello *
