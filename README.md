@@ -48,7 +48,7 @@ The fundamental theorem of arithmetic establishes the central role of primes in 
 ## Pig Latin
 Write function that translates a text to __Pig Latin__ and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding ‘__ay__’. “__The quick brown fox__” becomes “__Hetay uickqay rownbay oxfay__”.
 
-# Morse Code
+## Morse Code
 Write a program that automatically converts English text to Morse.
 
 ## List and String
