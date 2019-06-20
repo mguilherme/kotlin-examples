@@ -30,21 +30,23 @@ class ListAndStringTest : StringSpec({
             row("refer", true),
             row("dog", false),
             row("table", false)
-        ) { str, result ->
-            str.isPalindrome() shouldBe result
+        ) { str, expectedResult ->
+            str.isPalindrome() shouldBe expectedResult
         }
     }
 
+    val expectedFrame = """
+        *********
+        * Hello *
+        * World *
+        * in    *
+        * a     *
+        * frame *
+        *********
+        """.trimIndent()
+
     "should retrieve a list of strings in a rectangular frame" {
-        createFrame(listOf("Hello", "World", "in", "a", "frame")) shouldBe """
-                                                                        *********
-                                                                        * Hello *
-                                                                        * World *
-                                                                        * in    *
-                                                                        * a     *
-                                                                        * frame *
-                                                                        *********
-                                                                        """.trimIndent()
+        createFrame(listOf("Hello", "World", "in", "a", "frame")) shouldBe expectedFrame
     }
 
 })

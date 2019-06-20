@@ -19,7 +19,6 @@ class PasswordVerifierTest : StringSpec({
 
         ) { str, msg ->
             val exception = shouldThrow<IllegalArgumentException> { verify(str) }
-
             exception.message shouldBe msg
         }
     }

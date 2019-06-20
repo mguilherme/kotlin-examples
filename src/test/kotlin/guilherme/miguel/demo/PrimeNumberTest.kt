@@ -22,8 +22,8 @@ class PrimeNumberTest : StringSpec({
             row(10, false),
             row(11, true)
 
-        ) { n, result ->
-            n.isPrime() shouldBe result
+        ) { n, expectedResult ->
+            n.isPrime() shouldBe expectedResult
         }
     }
 

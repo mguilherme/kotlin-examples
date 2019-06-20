@@ -22,8 +22,8 @@ class FibonacciTest : StringSpec({
             row(8, 21),
             row(9, 34),
             row(10, 55)
-        ) { n, result ->
-            fibonacci(n) shouldBe result
+        ) { n, expectedResult ->
+            fibonacci(n) shouldBe expectedResult
         }
     }
 
