@@ -51,12 +51,12 @@ object Morse {
     /**
      * Converts a given text to Morse code.
      */
-    fun textToMorse(str: String): String = str.map { it.toString().toLowerCase() }.map { codes[it] }.joinToString(" ")
+    fun textToMorse(str: String) = str.map { it.toString().toLowerCase() }.map { codes[it] }.joinToString(" ")
 
     /**
      * Converts a given Morse code to text.
      */
-    fun morseToText(str: String): String = str.split(" ").map { codes.inverse()[it] }.joinToString("")
+    fun morseToText(str: String) = str.split(" ").map { codes.inverse()[it] }.joinToString("")
 
 }
 
