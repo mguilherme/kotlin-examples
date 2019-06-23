@@ -3,6 +3,14 @@ This project is a small showcase for what can be done in Kotlin with small algor
 The aim of this exercises are to solve the problems using kotlin library, therefore the idea is to make it as simple as possible.
 For each one please check the respective unit test.
 
+## Factorial
+Write a function to calculate the _factorial_ for a given number.
+
+The factorial of a positive number `n` is given by:
+```
+factorial of n (n!) = 1 * 2 * 3 * 4 * ... * n
+```
+
 ## Armstrong
 An Armstrong number is the one that equals the sum of its digits raised to the power of the number of digits in that number which is to be checked. To be more clear, let the number be __n__ and the number of digits be __x__. We represent the number as __nx nx-1 nx-2...n3 n2 n1 where n1, n2, n3...nx__ are single digits __0-9__. __n__ is an Armstrong number if
 
